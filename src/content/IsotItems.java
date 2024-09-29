@@ -30,6 +30,7 @@ public class IsotItems {
         sulfur = new Item("sulfur",Color.valueOf("e3c367")){{
             hardness = 0;
             alwaysUnlocked = true;
+            flammability = 0.2f;
         }};
         pulsealloy = new Item("pulsealloy",Color.valueOf("b3485d")){{
             cost = 2f;
@@ -37,34 +38,29 @@ public class IsotItems {
             hardness = 1;
             alwaysUnlocked = true;
         }};
-        /*
         seaweed = new Item("seaweed",Color.valueOf("8697a5")){{
-            cost = 0.5f;
-            hardness = 1;
             alwaysUnlocked = true;
+            flammability = 0.2f;
         }};
         rubidium = new Item("rubidium",Color.valueOf("8697a5")){{
-            cost = 0.5f;
-            hardness = 1;
+            cost = 3f;
             alwaysUnlocked = true;
         }};
         aluminium = new Item("aluminium",Color.valueOf("8697a5")){{
-            cost = 0.5f;
-            hardness = 1;
+            cost = 1f;
+            hardness = 2;
             alwaysUnlocked = true;
         }};
         azide = new Item("azide",Color.valueOf("8697a5")){{
-            cost = 0.5f;
-            hardness = 1;
             alwaysUnlocked = true;
+            flammability = 0.8f;
         }};
         lithium = new Item("lithium",Color.valueOf("8697a5")){{
-            cost = 0.5f;
+            cost = 2.5f;
             hardness = 1;
             alwaysUnlocked = true;
+            flammability = 0.1f;
         }};
-
-         */
 
         snewerusItems.addAll (
                 copper,zink,nikel,germanium,graphite,sulfur,fissileMatter,pulsealloy,seaweed,rubidium,aluminium,azide,lithium
