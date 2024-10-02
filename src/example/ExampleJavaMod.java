@@ -15,14 +15,8 @@ public class ExampleJavaMod extends Mod{
         Events.on(ClientLoadEvent.class, e -> {
             Time.runTask(10f, () -> {
                 BaseDialog dialog = new BaseDialog("In Search Of Terra");
-                dialog.cont.add("Work In Progress...").row();
-                dialog.cont.button("...But the time has come", dialog::hide).size(200f, 50f);
-                dialog.show();
-            });
-            Time.runTask(20f, () -> {
-                BaseDialog dialog = new BaseDialog("In Search Of Terra");
                 dialog.cont.add("Current version:").row();
-                dialog.cont.button("0.0.1 a", dialog::hide).size(200f, 50f);
+                dialog.cont.button("0.0.1 γ", dialog::hide).size(200f, 50f);
                 dialog.show();
             });
         });

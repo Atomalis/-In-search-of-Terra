@@ -26,7 +26,7 @@ public class IsotBlocks {
             corecolony,
             //wall
             //ore
-            orezink, orenikel, acid
+            oreznsge, orenicu, acid
             ;
 
     public static void load() {
@@ -90,10 +90,10 @@ public class IsotBlocks {
 
         //ore
 
-        orezink = new OreBlock(IsotItems.zink) {{
+        oreznsge = new OreBlock(IsotItems.zink) {{
             oreDefault = false;
         }};
-        orenikel = new OreBlock(IsotItems.nikel) {{
+        orenicu = new OreBlock(IsotItems.nikel) {{
             oreDefault = false;
         }};
         acid = new Floor("acidfloor"){{
