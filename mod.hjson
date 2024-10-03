@@ -1,11 +1,11 @@
 displayName: "In search of Terra"
 name:"isot"
-author: "Enless's, and music by Saigo."
+author: "Enless's code, sprites, and music by Saigo."
 main: "example.ExampleJavaMod"
 description: "WorkInProgress"
-version: 0.0.1 alpha
+version: 0.0.1 gamma
 minGameVersion: "146"
 java: true
-hidden: true
-hideBrowser: true
+hidden: false
+hideBrowser: false
 subtitle: "Time to boundless searches."

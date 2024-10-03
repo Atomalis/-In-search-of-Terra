@@ -16,7 +16,7 @@ public class ExampleJavaMod extends Mod{
             Time.runTask(10f, () -> {
                 BaseDialog dialog = new BaseDialog("In Search Of Terra");
                 dialog.cont.add("Current version:").row();
-                dialog.cont.button("0.0.1 γ", dialog::hide).size(200f, 50f);
+                dialog.cont.button("0.0.1 g", dialog::hide).size(200f, 50f);
                 dialog.show();
             });
         });
@@ -27,6 +27,7 @@ public class ExampleJavaMod extends Mod{
         IsotItems.load();
         IsotLiquids.load();
         IsotUnitTypes.load();
+        //IsotUiAC.load();
         IsotBlocks.load();
         IsotPlanets.load();
     }

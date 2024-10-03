@@ -70,7 +70,6 @@ public class IsotPlanets{
             unlockedOnLand.add(IsotBlocks.corecolony);
         }};
 
-            //i dont fucking know (thx dusted land source code)
             Planets.serpulo.hiddenItems.addAll(IsotItems.snewerusItems).removeAll(Items.serpuloItems);
             Planets.erekir.hiddenItems.addAll(IsotItems.snewerusItems).removeAll(Items.erekirItems);
         }
