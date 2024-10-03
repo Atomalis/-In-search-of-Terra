@@ -8,7 +8,7 @@ import static mindustry.content.Items.*;
 
 public class IsotItems {
     public static Item
-            zink,nikel,germanium,pulsealloy,sulfur,seaweed,rubidium,aluminium,azide,lithium;
+            zink,nikel,germanium,pulsealloy,nilver,sulfur,seaweed,rubidium,aluminium,azide,lithium;
 
     public static final Seq<Item> snewerusItems = new Seq<>();
 
@@ -36,6 +36,10 @@ public class IsotItems {
             cost = 2f;
             charge = 1.2f;
             hardness = 1;
+            alwaysUnlocked = true;
+        }};
+        nilver = new Item("nilver",Color.valueOf("8697a5")){{
+            cost = 2f;
             alwaysUnlocked = true;
         }};
         seaweed = new Item("seaweed",Color.valueOf("8697a5")){{

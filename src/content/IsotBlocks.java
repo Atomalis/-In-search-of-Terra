@@ -1,15 +1,24 @@
 package content;
 
+import arc.graphics.Color;
+import mindustry.content.Fx;
 import mindustry.content.Items;
 import mindustry.content.StatusEffects;
+import mindustry.gen.Sounds;
 import mindustry.graphics.CacheLayer;
 import mindustry.type.Category;
+import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.defense.Wall;
 import mindustry.world.blocks.distribution.*;
 import mindustry.world.blocks.environment.Floor;
 import mindustry.world.blocks.environment.OreBlock;
+import mindustry.world.blocks.production.Drill;
+import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.blocks.storage.CoreBlock;
+import mindustry.world.draw.DrawDefault;
+import mindustry.world.draw.DrawFlame;
+import mindustry.world.draw.DrawMulti;
 
 import static mindustry.type.ItemStack.with;
 
@@ -33,10 +42,17 @@ public class IsotBlocks {
     public static void load() {
 
         //production
-        steamdrill = new Wall("steam-drill"){{
-                    requirements(Category.defense, with(Items.copper, 2));
-                    health = 80;
-                    size = 2;
+
+        steamdrill = new Drill("steam-drill"){{
+            requirements(Category.production, with(Items.copper, 35));
+            drillTime = 280;
+            size = 2;
+            hasPower = true;
+            tier = 4;
+            updateEffect = Fx.pulverizeMedium;
+            drillEffect = Fx.mineBig;
+
+            consumeLiquid(IsotLiquids.steam, 0.08f);
         }};
         germaniumrestorer = new Wall("germanium-restorer"){{
             requirements(Category.defense, with(Items.copper, 2));
@@ -47,10 +63,21 @@ public class IsotBlocks {
         //power
 
         //crafting
-        nilversmelter = new Wall("nilver-smelter"){{
-                    requirements(Category.defense, with(Items.copper, 2));
-                    health = 80;
-                    size = 2;
+
+        nilversmelter = new GenericCrafter("nilver-smelter"){{
+            requirements(Category.crafting, with(Items.copper, 30));
+            craftEffect = Fx.smeltsmoke;
+            outputItem = new ItemStack(IsotItems.nilver, 1);
+            craftTime = 240f;
+            size = 2;
+            hasPower = true;
+            hasLiquids = false;
+            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(Color.valueOf("cca4a4")));
+            ambientSound = Sounds.smelter;
+            ambientSoundVolume = 0.07f;
+
+            consumeItems(with(Items.copper, 5, IsotItems.nikel, 2, IsotItems.zink, 2));
+            consumePower(0.50f);
         }};
 
         //distribution
