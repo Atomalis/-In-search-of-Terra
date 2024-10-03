@@ -5,6 +5,7 @@ import mindustry.content.StatusEffects;
 import mindustry.graphics.CacheLayer;
 import mindustry.type.Category;
 import mindustry.world.Block;
+import mindustry.world.blocks.defense.Wall;
 import mindustry.world.blocks.distribution.*;
 import mindustry.world.blocks.environment.Floor;
 import mindustry.world.blocks.environment.OreBlock;
@@ -15,7 +16,7 @@ import static mindustry.type.ItemStack.with;
 public class IsotBlocks {
     public static Block
             //production
-            steamdrill,
+            steamdrill, germaniumrestorer,
             //power
 
             //crafting
@@ -30,7 +31,27 @@ public class IsotBlocks {
             ;
 
     public static void load() {
+
+        //production
+        steamdrill = new Wall("steam-drill"){{
+                    requirements(Category.defense, with(Items.copper, 2));
+                    health = 80;
+                    size = 2;
+        }};
+        germaniumrestorer = new Wall("germanium-restorer"){{
+            requirements(Category.defense, with(Items.copper, 2));
+            health = 80;
+            size = 2;
+        }};
+
+        //power
+
         //crafting
+        nilversmelter = new Wall("nilver-smelter"){{
+                    requirements(Category.defense, with(Items.copper, 2));
+                    health = 80;
+                    size = 2;
+        }};
 
         //distribution
 

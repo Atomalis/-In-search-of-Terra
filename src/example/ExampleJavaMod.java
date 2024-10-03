@@ -27,7 +27,6 @@ public class ExampleJavaMod extends Mod{
         IsotItems.load();
         IsotLiquids.load();
         IsotUnitTypes.load();
-        //IsotUiAC.load();
         IsotBlocks.load();
         IsotPlanets.load();
     }
