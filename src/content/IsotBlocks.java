@@ -3,6 +3,7 @@ package content;
 import arc.graphics.Color;
 import mindustry.content.Fx;
 import mindustry.content.Items;
+import mindustry.content.Liquids;
 import mindustry.content.StatusEffects;
 import mindustry.gen.Sounds;
 import mindustry.graphics.CacheLayer;
@@ -36,7 +37,7 @@ public class IsotBlocks {
             corecolony,
             //wall
             //ore
-            oreznsge, orenicu, acid
+            oreznsge, orenicu, acid, silentwater
             ;
 
     public static void load() {
@@ -151,6 +152,17 @@ public class IsotBlocks {
             speedMultiplier = 0.5f;
             variants = 0;
             liquidDrop = IsotLiquids.acid;
+            liquidMultiplier = 0.5f;
+            isLiquid = true;
+            cacheLayer = CacheLayer.water;
+        }};
+        silentwater = new Floor("silent-water"){{
+            drownTime = 150f;
+            status = StatusEffects.wet;
+            statusDuration = 240f;
+            speedMultiplier = 0.7f;
+            variants = 0;
+            liquidDrop = Liquids.water;
             liquidMultiplier = 0.5f;
             isLiquid = true;
             cacheLayer = CacheLayer.water;
